@@ -75,7 +75,14 @@ octal = 52
 **7.** Виконайте всі арифметичні операції (+, -, *, /, //, %, **) з числами 17 та 5. 
 Виведіть результати з поясненнями.
 """
-# код вводити тут
+one = 17
+two = 5
+print(f"додавання: {one + two}")
+print(f"віднімання: {one - two}")
+print(f"множення: {one * two}")
+print(f"ділення: {one / two}")
+print(f"піднесення до степеня: {one - two}")
+
 
 """
 **8.** Обчисліть площу кола з радіусом 7.5. Використайте значення π = 3.14159.
@@ -88,7 +95,12 @@ circle = pi * (r ** 2)
 **9.** Обчисліть залишок від ділення будь-якого числа на 7. 
 Виведіть результат з числами 50, 33, 14.
 """
-# код вводити тут
+remain_50 = 50 % 7
+remain_33 = 33 % 7
+remain_14 = 14 % 7
+print("діл 50 на 7 =:", remain_50)
+print("діл 33 на 7 =:", remain_33)
+print("діл 14 на 7 =:", remain_14)
 
 """
 **10.** Переведіть задачу з книги "Математика, 5 клас"
@@ -99,6 +111,10 @@ circle = pi * (r ** 2)
 ське моря разом?
 """
 # код вводити тут
+area1 = 439402
+area2 = 37800
+print(f"Площа яку іони займають разом - {area1 + area2}")
+
 
 """
 **11.** Створіть рядок з вашим повним ім'ям та виведіть:
@@ -106,7 +122,12 @@ circle = pi * (r ** 2)
 - Останній символ  
 - Довжину рядка
 """
-# код вводити тут
+
+fullname = "Хаустова Христина Богданівна"
+first_char = fullname[0]
+last_char = fullname[-1]
+length = len(fullname)
+print(f"повне ім'я - {fullname}. перший символ - {first_char}. Останній - {last_char}. Довжина - {length} ")
 
 """
 **12.** Створіть рядок "Would you tell me, please, which way I ought to go from here?" 
@@ -131,8 +152,11 @@ This space, which was too small for someone to go into, was a perfect place for 
 """
 **14.** Поєднайте два рядки "Hello" та "World" у різні способи (з пробілом, з комою, з новим рядком).
 """
-# код вводити тут
-
+w1 = "Hello"
+w2 = "World"
+space = w1 + " " + w2
+comma = w1 + ", " + w2
+newline = w1 + "\n" + w2
 """
 **15.** Створіть рядок з символами, які потребують екранування (лапки, зворотна коса риска).
 """
@@ -157,6 +181,9 @@ print(f"Привт, {name}! Тобі {age} років.")
 Ігорю, щоб вклеїти всі фото?
 """
 all_photo = 232
+per_page = 8
+required_pages = all_photo / per_page
+print(required_pages)
 
 
 """
@@ -164,7 +191,10 @@ all_photo = 232
 його улюблений колір та число, а потім створює персоналізоване
 повідомлення використовуючи f-string форматування.
 """
-# код вводити тут
+
+color = input("Який колір вам подобається?")
+number = input("Цікаво, яке у вас улюблене число?")
+print(f"Зрозуміло! Твій цлюблений колір - {color}, а число - {number}!")
 
 
 """
@@ -176,7 +206,13 @@ all_photo = 232
 250 449 товарів. На другому та третьому – 222 950 товарів.
 Знайдіть кількість товарів, що розміщені на кожному складі.
 """
-# код вводити тут
+total_warehouse = 375291
+first_and_second_warehouse = 250449
+second_and_third_warehouse = 222950
+warehouse3 = total_warehouse - first_and_second_warehouse
+warehouse1 = total_warehouse - second_and_third_warehouse
+warehouse2 = first_and_second_warehouse - warehouse1
+print(f"Склад1 це {warehouse1}. Склад2 це {warehouse2}. Склад3 це {warehouse3}")
 
 
 """
@@ -188,4 +224,7 @@ all_photo = 232
 вати необхідно буде півтора року по 1179 грн/місяць. Обчисліть
 вартість комп’ютера.
 """
-# код вводити тут
+sum_per_month = 1179
+year = 1.5
+total = year * 12
+print("Вартість компа:", total, "грн" )
