@@ -115,7 +115,6 @@ print(previous_sentence)
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
-# 1. Отримуємо останнє речення зі списку
 last_sentence = adwentures_of_tom_sawer_sentences[-1]
 last_sentence = last_sentence.split()
 count = len(last_sentence)
