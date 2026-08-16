@@ -24,50 +24,99 @@ rolling in wealth."""
 # task 01 ==
 """ Дані у строці adwentures_of_tom_sawer розбиті випадковим чином, через помилку.
 треба замінити кінець абзацу на пробіл .replace("\n", " ")"""
+sawyertom = adwentures_of_tom_sawer.replace("\n", " ")
+print(sawyertom)
 
 # task 02 ==
 """ Замініть .... на пробіл
 """
 
+tom_sawer = adwentures_of_tom_sawer.replace("....", " ")
+print(tom_sawer)
 
 # task 03 ==
 """ Зробіть так, щоб у тексті було не більше одного пробілу між словами.
 """
+tom_sawyer = " ".join(adwentures_of_tom_sawer.split())
+print(tom_sawyer)
 
 
 # task 04
 """ Виведіть, скількі разів у тексті зустрічається літера "h"
 """
-
+lettercount = adwentures_of_tom_sawer.count("h")
+print(f"у тексті {lettercount} літер h.")
 
 # task 05
 """ Виведіть, скільки слів у тексті починається з Великої літери?
 підказка - порахувати кожну велику літеру напр, .count("A") і їх сумму
 """
+capitalwords_count = (
+    adwentures_of_tom_sawer.count("A") +
+    adwentures_of_tom_sawer.count("B") +
+    adwentures_of_tom_sawer.count("C") +
+    adwentures_of_tom_sawer.count("D") +
+    adwentures_of_tom_sawer.count("E") +
+    adwentures_of_tom_sawer.count("F") +
+    adwentures_of_tom_sawer.count("G") +
+    adwentures_of_tom_sawer.count("H") +
+    adwentures_of_tom_sawer.count("I") +
+    adwentures_of_tom_sawer.count("J") +
+    adwentures_of_tom_sawer.count("K") +
+    adwentures_of_tom_sawer.count("L") +
+    adwentures_of_tom_sawer.count("M") +
+    adwentures_of_tom_sawer.count("N") +
+    adwentures_of_tom_sawer.count("O") +
+    adwentures_of_tom_sawer.count("P") +
+    adwentures_of_tom_sawer.count("Q") +
+    adwentures_of_tom_sawer.count("R") +
+    adwentures_of_tom_sawer.count("S") +
+    adwentures_of_tom_sawer.count("T") +
+    adwentures_of_tom_sawer.count("U") +
+    adwentures_of_tom_sawer.count("V") +
+    adwentures_of_tom_sawer.count("W") +
+    adwentures_of_tom_sawer.count("X") +
+    adwentures_of_tom_sawer.count("Y") +
+    adwentures_of_tom_sawer.count("Z")
+)
 
+print(f"велика літера слова ось стільки: {capitalwords_count}")
 
 # task 06
 """ Виведіть позицію, на якій слово Tom зустрічається вдруге
 """
-
+# Шукаємо позицію першого слова "Tom"
+tom_one = adwentures_of_tom_sawer.find("Tom")
+tom_two = adwentures_of_tom_sawer.find("Tom", tom_one + 1)
+print(f"well, here is {tom_two}")
 
 # task 07
 """ Розділіть змінну adwentures_of_tom_sawer по кінцю речення.
 Збережіть результат у змінній adwentures_of_tom_sawer_sentences
 """
-adwentures_of_tom_sawer_sentences = None
+adwentures_of_tom_sawer_sentences = adwentures_of_tom_sawer.split(". ")
+for sentences in adwentures_of_tom_sawer_sentences:
+    print(sentences)
 
 # task 08
 """ Виведіть четверте речення з adwentures_of_tom_sawer_sentences.
 Перетворіть рядок у нижній регістр.
 """
-
+sentence_four = adwentures_of_tom_sawer_sentences[3]
+sentence_four_lower = sentence_four.lower()
+print(sentence_four_lower)
 
 # task 09
 """ Перевірте чи починається якесь речення з "By the time".
 """
-
+previous_sentence = adwentures_of_tom_sawer_sentences[3].startswith("By the time")
+print(previous_sentence)
 
 # task 10
 """ Виведіть кількість слів останнього речення з adwentures_of_tom_sawer_sentences.
 """
+# 1. Отримуємо останнє речення зі списку
+last_sentence = adwentures_of_tom_sawer_sentences[-1]
+last_sentence = last_sentence.split()
+count = len(last_sentence)
+print(f"слова: {count}")
