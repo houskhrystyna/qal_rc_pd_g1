@@ -12,3 +12,8 @@ x = 5
 # Створіть змінну savings із значенням 100.
 
 # Перевірте цю змінну, ввівши print(savings)
+savings = 100
+print(savings)
+
+x = 5
+print(x)
