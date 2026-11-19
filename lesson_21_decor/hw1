@@ -1,0 +1,33 @@
+import logging
+
+logging.basicConfig(level=logging.INFO, format='%(levelname)s %(message)s')
+
+def chronicle(chronicler="Анонімний"):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            args_list = [repr(a) for a in args]
+            kwargs_list = [f"{k}={repr(v)}" for k, v in kwargs.items()]
+            signature = ", ".join(args_list + kwargs_list)
+            
+            logging.info(f"[Літописець: {chronicler}] Викликано: {func.__name__}({signature})")
+            
+            result = func(*args, **kwargs)
+            
+            logging.info(f"[Результат]: {result}")
+            
+            return result
+            
+        return wrapper
+    return decorator
+
+
+@chronicle("Самійло Величко")
+def make_decision(action, target):
+    return f"Рішення: {action} → {target}"
+
+@chronicle()
+def count_warriors(regiment):
+    return 500
+
+make_decision("Атакувати", "Перекоп")
+count_warriors("Полтавський")

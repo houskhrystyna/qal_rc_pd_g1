@@ -4,5 +4,9 @@
 
 """
 # Віднімання
+result1 = 5-5
+print(result1)
 
 # Множення
+result2 = 3 * 5
+print(result2)
